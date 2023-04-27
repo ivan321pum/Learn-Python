@@ -15,4 +15,3 @@ if mi_number >= 10:
     print("Es mayor o igual que 10")
 else:
     print("Es menor que 10")
-ukygyjtf
