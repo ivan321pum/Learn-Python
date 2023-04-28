@@ -22,3 +22,11 @@ if my_new_condition > 24:
     print("Es mayor que 24")
 elif my_new_condition > 34:  # else if
     print("Es mayor que 14")
+
+my_string = ""
+
+if not my_string:
+    print("Mi cadena de texto es vaciá")
+
+if my_string == "Mi cadena de texto":
+    print("Estas cadenas de texto coinciden: ", my_string)
