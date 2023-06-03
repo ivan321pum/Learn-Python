@@ -8,3 +8,6 @@ print(my_list)
 
 my_range = range(8)
 print(list(my_range))
+
+my_other_list = [i * i for i in range(8)]
+print(my_other_list)
