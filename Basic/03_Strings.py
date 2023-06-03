@@ -46,7 +46,6 @@ language_slice = language[0:6:2]
 print(language_slice)
 
 # Reverse
-
 reversed_language = language[::-1]
 print(reversed_language)
 

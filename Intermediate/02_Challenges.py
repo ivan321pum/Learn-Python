@@ -10,7 +10,7 @@ cada impresión), sustituyendo los siguientes:
 - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
 """
 
-
+print("Fizzbuzz")
 def fizzbuzz():
     for current_num in range(1, 101):
         if current_num % 3 == 0 and current_num % 5 == 0:
@@ -24,7 +24,7 @@ def fizzbuzz():
 
 fizzbuzz()
 
-
+print("anagrama")
 """
 ¿ES UN ANAGRAMA?
 Escribe una función que reciba dos palabras (String) y retorne
@@ -46,6 +46,7 @@ def is_anagram(word1, word2):
 print(is_anagram("amor", "amor"))
 
 
+print("Fibonacci")
 """
 LA SUCESIÓN DE FIBONACCI
 Escribe un programa que imprima los 50 primeros números de la sucesión
@@ -55,6 +56,58 @@ de Fibonacci empezando en 0.
   0, 1, 1, 2, 3, 5, 8, 13...
 """
 
-def fibonacci():
 
+def fibonacci():
+    penultimo_numero = 0
+    ultimo_numero = 1
+    print(penultimo_numero)
+    print(ultimo_numero)
+    for index in range(0, 50):
+        numero_actual = ultimo_numero + penultimo_numero
+        print(numero_actual)
+        penultimo_numero = ultimo_numero
+        ultimo_numero = numero_actual
+
+
+fibonacci()
+
+"""
+¿ES UN NÚMERO PRIMO?
+Escribe un programa que se encargue de comprobar si un número es o no primo.
+"""
+
+
+def is_a_prime_number(number):
+    if number >= 2:
+        for index in range(2, number):
+            if number % index == 0:
+                return False
+            else:
+                return True
+    else:
+        return True
+
+
+print(is_a_prime_number(1))
+
+"""
+INVIRTIENDO CADENAS
+Crea un programa que invierta el orden de una cadena de texto
+sin usar funciones propias del lenguaje que lo hagan de forma automática.
+- Si le pasamos "Hola mundo" nos retornaría "odnum aloH"
+"""
+
+
+def inverter_3000(string):
+    reversed_string = string[::-1]
+    return reversed_string
+
+
+print(inverter_3000("Hola mundo"))
+
+
+"""/*
+ * Crea un programa se encargue de transformar un número
+ * decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente.
+ */"""
 
