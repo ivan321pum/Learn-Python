@@ -107,7 +107,75 @@ print(inverter_3000("Hola mundo"))
 
 
 """/*
- * Crea un programa se encargue de transformar un número
- * decimal a binario sin utilizar funciones propias del lenguaje que lo hagan directamente.
+ * Crea una función que reciba dos cadenas como parámetro (str1, str2)
+ * e imprima otras dos cadenas como salida (out1, out2).
+ * - out1 contendrá todos los caracteres presentes en la str1 pero NO
+ *   estén presentes en str2.
+ * - out2 contendrá todos los caracteres presentes en la str2 pero NO
+ *   estén presentes en str1.
  */"""
+
+
+def dont_repeat_numbers(str1, str2):
+    str1 = str1.lower()
+    str1_list = [char for char in str1]
+    str2 = str2.lower()
+    str2_list = [char for char in str2]
+
+    non_repeated_chars_str1 = []
+    non_repeated_chars_str2 = []
+
+    for char in str1_list:
+        if char not in str2_list:
+            non_repeated_chars_str1.append(char)
+
+    for char in str2_list:
+        if char not in str1_list:
+            non_repeated_chars_str2.append(char)
+
+    out1 = "".join(non_repeated_chars_str1)
+    out2 = "".join(non_repeated_chars_str2)
+    return out1, out2
+
+
+print(dont_repeat_numbers("sube", "baja"))
+
+
+"""/*
+ * Escribe una función que calcule y retorne el factorial de un número dado
+ */"""
+
+
+def recursive(num):
+    output = 1
+    while num != 1:
+        output = output * num
+        num -= 1
+    return output
+
+
+print(recursive(4))
+
+"""/*
+ * Escribe una función que calcule si un número dado es un número de Armstrong
+ * (o también llamado narcisista).
+ * Si no conoces qué es un número de Armstrong, debes buscar información 
+ * al respecto.
+ */"""
+
+
+def transform_int_into_list(num):
+    strings = str(num)
+    digits = []
+    for char in strings:
+        digits.append(int(char))
+    return digits
+
+
+def transform_list_into_int(the_list):
+    the_int = sum(the_list)
+    return the_int
+
+
+def armstrong_number():
 
