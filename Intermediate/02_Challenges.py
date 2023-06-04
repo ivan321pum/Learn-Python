@@ -191,3 +191,23 @@ def armstrong_number(num):
 
 
 print(armstrong_number(8207))
+
+"""/*
+ * Crea una función que reciba un String de cualquier tipo y se encargue de
+ * poner en mayúscula la primera letra de cada palabra.
+ * - No se pueden utilizar operaciones del lenguaje que
+ *   lo resuelvan directamente.
+ */"""
+
+
+def capitalize_first_letter(string):
+    words = string.split()  # Dividir la cadena en palabras separadas
+    capitalized_words = []
+    for word in words:
+        capitalized_word = word[0].upper() + word[1:]  # Convertir la primera letra en mayúscula
+        capitalized_words.append(capitalized_word)
+    capitalized_string = " ".join(capitalized_words)  # Unir las palabras con espacios
+    return capitalized_string
+
+
+print(capitalize_first_letter("don't stop me now"))
