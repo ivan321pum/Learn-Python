@@ -177,5 +177,17 @@ def transform_list_into_int(the_list):
     return the_int
 
 
-def armstrong_number():
+def armstrong_number(num):
+    digits = transform_int_into_list(num)
+    number_of_digits = len(digits)
+    elevated_number = 0
+    sum_of_powers = 0
+    for digit in digits:
+        sum_of_powers += digit ** number_of_digits
+    if sum_of_powers == num:
+        return True
+    else:
+        return False
 
+
+print(armstrong_number(8207))
