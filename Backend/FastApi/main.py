@@ -6,6 +6,7 @@ app = FastAPI()
 de la variable a la que hemos asignado fastapi) --reload(para que se recargue automaticamente"""
 
 
+
 @app.get("/")  # / es para ponerlo en la raíz, pero podrias ponerlo en cualquier otra página
 async def root():  # Se pone asíncrono para no parar todo el programa en lo que tarda en hacer la petición del backend
     return "¡Hola mundo!"
@@ -18,3 +19,9 @@ async def home():
 
 # Fastapi genera documentación automáticamente, para verla hay que poner en el navegador: direccion/docs o
 # direccion/redoc
+
+# get: es obtener datos del backend
+# post: es enviar datos al backend
+# put: es actualizar datos del backend
+# delete: es borrar datos del backend
+
