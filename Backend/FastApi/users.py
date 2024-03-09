@@ -28,7 +28,7 @@ async def usersjson():
             ]
 
 
-@app.get("/user/{id}")
+@app.get("/user/{id}") #Path
 async def userclass(id: int):
     if id == 0:  # Este condicional lo que hace es que si introduces 0 como parametro te devuelva todos los usuarios
         return users_lists
@@ -40,7 +40,7 @@ async def userclass(id: int):
             return {"Error": "No se encontró ningún usuario con el id dado"}
 
 
-@app.get("/user")
+@app.get("/user") #Query
 async def userquery(id: Optional[int] = None):
     return search_user(id)
 
@@ -63,3 +63,5 @@ def search_user(id: int):
             return {"Error": "No se encontró ningún usuario con el id dado"}
 
 
+#@app.delete("/user")
+#async def delete_user(id:int):
